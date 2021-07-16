@@ -42,7 +42,7 @@ class Battlefield:
         self.display_winners(winner)
 
     def display_welcome(self):
-        print("Welcome to the Dunderth ome (tm not pending). Get ready to fight!")
+        print("Welcome to the Dunderthdome! Two may enter, only one may leave. Get ready to fight!")
         first_turn = random.randrange(1, 2)
         if first_turn == 1:
             print("Robots won the coin toss!\n")
@@ -60,7 +60,7 @@ class Battlefield:
         # if first_turn == 2:
         #     print("Dinosaurs won the coin toss!")
         #     first_turn = 2
-
+        # this was just longer than it needed to be.
         # if first_turn == 1:
         #     while len(self.fleet.robots) > 0 and len(self.herd.dinosaurs) > 0:
         #         if self.fleet.robots[0].health > 0 or self.herd.dinosaurs[0].health > 0:
@@ -96,10 +96,10 @@ class Battlefield:
         #                 return
 
     def dino_turn(self, dinosaur):
-        pass
+        self.herd.dinosaurs[0].attack(self.fleet.robots[0])
 
     def robo_turn(self, robot):
-        pass
+        self.fleet.robots[0].attack(self.herd.dinosaurs[0])
 
     def show_dino_opponent_options(self):
         pass
@@ -107,5 +107,5 @@ class Battlefield:
     def show_robo_opponent_options(self):
         pass
 
-    def display_winners(self):
-        pass
+    def display_winners(self, winner):
+        print(winner)
