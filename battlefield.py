@@ -27,14 +27,14 @@ class Battlefield:
                 self.dino_turn()
                 self.robo_turn()
             if self.fleet.robots[0].health <= 0:
-                print(self.fleet.robots[0].name + " has fallen.")
+                print(self.fleet.robots[0].name + " has been crushed!")
                 self.fleet.robots.remove(self.fleet.robots[0])
             if self.herd.dinosaurs[0].health <= 0:
                 print(self.herd.dinosaurs[0].name +
-                      " an extinction level event has occurred.")
+                      " was hit with an extinction level event!")
                 self.herd.dinosaurs.remove(self.herd.dinosaurs[0])
             if len(self.fleet.robots) < 1:
-                winner = "Dinosaurs have made a dent in waste!"
+                winner = "Dinosaurs have made taken the Robots to the recycling center!"
                 game_state = False
             if len(self.herd.dinosaurs) < 1:
                 winner = "Robots were victorious against the meat bags!"
@@ -42,16 +42,16 @@ class Battlefield:
         self.display_winners(winner)
 
     def display_welcome(self):
-        print("Welcome to the Dunderthdome! Two may enter, only one may leave. Get ready to fight!")
-        first_turn = random.randrange(1, 2)
-        if first_turn == 1:
+        print("Welcome to the Dunderthome! Two may enter, only one may leave. Get ready to fight!")
+        coin_toss = random.randrange(2)
+        if coin_toss == 1:
             print("Robots won the coin toss!\n")
         else:
             print("Dinosaurs won the coin toss!\n")
-        return first_turn
+        return coin_toss
 
-    def battle(self):
-        pass
+    # def battle(self):
+        # pass
         # this is better as part of the wecome
         # first_turn = random.randint(1, 2)
         # if first_turn == 1:
@@ -60,7 +60,7 @@ class Battlefield:
         # if first_turn == 2:
         #     print("Dinosaurs won the coin toss!")
         #     first_turn = 2
-        # this was just longer than it needed to be.
+        # this was condensed into run_game.
         # if first_turn == 1:
         #     while len(self.fleet.robots) > 0 and len(self.herd.dinosaurs) > 0:
         #         if self.fleet.robots[0].health > 0 or self.herd.dinosaurs[0].health > 0:
@@ -96,10 +96,16 @@ class Battlefield:
         #                 return
 
     def dino_turn(self):
-        self.herd.dinosaurs[0].attack(self.fleet.robots[0])
+        if self.herd.dinosaurs[0].health > 0:
+            self.herd.dinosaurs[0].attack(self.fleet.robots[0])
+        else:
+            pass
 
     def robo_turn(self):
-        self.fleet.robots[0].attack(self.herd.dinosaurs[0])
+        if self.fleet.robots[0].health > 0:
+            self.fleet.robots[0].attack(self.herd.dinosaurs[0])
+        else:
+            pass
 
     def show_dino_opponent_options(self):
         pass
