@@ -12,7 +12,8 @@ class Battlefield:
     def run_game(self):
         fleet = Fleet()
         herd = Herd()
-        self.display_welcome()
+        turn_one = self.display_welcome()
+        # self.display_welcome()
         fleet.create_fleet()
         herd.create_herd()
         self.fleet = fleet
