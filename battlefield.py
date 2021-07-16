@@ -29,7 +29,7 @@ class Battlefield:
                 self.robo_turn()
             if self.fleet.robots[0].health <= 0:
                 print(self.fleet.robots[0].name +
-                      " has been crushed like cans!")
+                      " have been crushed like cans!")
                 self.fleet.robots.remove(self.fleet.robots[0])
             if self.herd.dinosaurs[0].health <= 0:
                 print(self.herd.dinosaurs[0].name +
