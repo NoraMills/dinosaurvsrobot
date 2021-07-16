@@ -15,7 +15,7 @@ class Fleet:
         while i < 3:
             name = robot_names[i]
             weapon_name = names_of_weapons[i]
-            weapon_damage = damage_of_weapons[I]
+            weapon_damage = damage_of_weapons[i]
             robot = Robot(name)
             robot.weapon = Weapon(weapon_name, weapon_damage)
             robots.append(robot)

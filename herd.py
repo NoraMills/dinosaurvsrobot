@@ -12,7 +12,7 @@ class Herd:
         damage_of_dinosaurs = [15, 25, 20]
         while i < 3:
             name = dinosaur_names[i]
-            dinosaur_damage = damage_of_dinosaurs[I]
+            dinosaur_damage = damage_of_dinosaurs[i]
             dinosaur = Dinosaur(name, dinosaur_damage)
             dinosaurs.append(dinosaur)
             i += 1
