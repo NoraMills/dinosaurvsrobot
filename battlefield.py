@@ -51,7 +51,7 @@ class Battlefield:
         return first_turn
 
     def battle(self):
-
+        pass
         # this is better as part of the wecome
         # first_turn = random.randint(1, 2)
         # if first_turn == 1:
@@ -95,10 +95,10 @@ class Battlefield:
         #                 self.display_winners_robots()
         #                 return
 
-    def dino_turn(self, dinosaur):
+    def dino_turn(self):
         self.herd.dinosaurs[0].attack(self.fleet.robots[0])
 
-    def robo_turn(self, robot):
+    def robo_turn(self):
         self.fleet.robots[0].attack(self.herd.dinosaurs[0])
 
     def show_dino_opponent_options(self):

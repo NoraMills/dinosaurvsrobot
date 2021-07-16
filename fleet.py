@@ -1,5 +1,6 @@
 from robot import Robot
 from weapon import Weapon
+import random
 
 
 class Fleet:
@@ -11,7 +12,8 @@ class Fleet:
         robots = []
         robot_names = ["Lore", "Rock Em", "Sock Em"]
         names_of_weapons = ["Lascannon", "Power Sword", "Heavy Bolter"]
-        damage_of_weapons = [15, 25, 20]
+        damage_of_weapons = [random.randrange(
+            8, 13), random.randrange(10, 25), random.randrange(2, 10)]
         while i < 3:
             name = robot_names[i]
             weapon_name = names_of_weapons[i]
