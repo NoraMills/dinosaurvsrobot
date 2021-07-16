@@ -4,6 +4,7 @@ import random
 
 
 class Battlefield:
+
     def __init__(self):
         self.Fleet = None
         self.Herd = None
@@ -11,7 +12,6 @@ class Battlefield:
     def run_game(self):
         fleet = Fleet()
         herd = Herd()
-        turn_one = self.display_welcome()
         self.display_welcome()
         fleet.create_fleet()
         herd.create_herd()
