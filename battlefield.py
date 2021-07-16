@@ -16,6 +16,8 @@ class Battlefield:
         # self.display_welcome()
         fleet.create_fleet()
         herd.create_herd()
+        self.fleet = fleet
+        self.herd = herd
         winner = None
         game_state = True
         while game_state:
@@ -27,14 +29,14 @@ class Battlefield:
                 self.robo_turn()
             if self.fleet.robots[0].health <= 0:
                 print(self.fleet.robots[0].name +
-                      " has been crushed like a can!")
+                      " has been crushed like cans!")
                 self.fleet.robots.remove(self.fleet.robots[0])
             if self.herd.dinosaurs[0].health <= 0:
                 print(self.herd.dinosaurs[0].name +
                       " was hit with an extinction level event!")
                 self.herd.dinosaurs.remove(self.herd.dinosaurs[0])
             if len(self.fleet.robots) < 1:
-                winner = "Dinosaurs have taken the Robots to the recycling center!"
+                winner = "Dinosaurs have been taken the Robots to the recycling center!"
                 game_state = False
             if len(self.herd.dinosaurs) < 1:
                 winner = "Robots were victorious against the meat bags!"
@@ -107,12 +109,11 @@ class Battlefield:
         else:
             pass
 
-# did not use
-    # def show_dino_opponent_options(self):
-        # pass
+    def show_dino_opponent_options(self):
+        pass
 
-    # def show_robo_opponent_options(self):
-        # pass
+    def show_robo_opponent_options(self):
+        pass
 
     def display_winners(self, winner):
         print(winner)
