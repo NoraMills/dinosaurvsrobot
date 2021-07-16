@@ -16,8 +16,6 @@ class Battlefield:
         # self.display_welcome()
         fleet.create_fleet()
         herd.create_herd()
-        self.fleet = fleet
-        self.herd = herd
         winner = None
         game_state = True
         while game_state:
