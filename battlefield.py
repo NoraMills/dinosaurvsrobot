@@ -33,7 +33,7 @@ class Battlefield:
                       " was hit with an extinction level event!")
                 self.herd.dinosaurs.remove(self.herd.dinosaurs[0])
             if len(self.fleet.robots) < 1:
-                winner = "Dinosaurs have made taken the Robots to the recycling center!"
+                winner = "Dinosaurs have taken the Robots to the recycling center!"
                 game_state = False
             if len(self.herd.dinosaurs) < 1:
                 winner = "Robots were victorious against the meat bags!"
