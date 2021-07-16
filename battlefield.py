@@ -26,7 +26,8 @@ class Battlefield:
                 self.dino_turn()
                 self.robo_turn()
             if self.fleet.robots[0].health <= 0:
-                print(self.fleet.robots[0].name + " has been crushed!")
+                print(self.fleet.robots[0].name +
+                      " has been crushed like a can!")
                 self.fleet.robots.remove(self.fleet.robots[0])
             if self.herd.dinosaurs[0].health <= 0:
                 print(self.herd.dinosaurs[0].name +
@@ -106,11 +107,12 @@ class Battlefield:
         else:
             pass
 
-    def show_dino_opponent_options(self):
-        pass
+# did not use
+    # def show_dino_opponent_options(self):
+        # pass
 
-    def show_robo_opponent_options(self):
-        pass
+    # def show_robo_opponent_options(self):
+        # pass
 
     def display_winners(self, winner):
         print(winner)
